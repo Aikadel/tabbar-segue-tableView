@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookView" customModule="tabbar_custom_template_view" customModuleProvider="target">
+            <connections>
+                <outlet property="bookButton" destination="u6T-dd-U2M" id="oLk-QU-AQS"/>
+                <outlet property="bookImage" destination="dVz-al-tJB" id="aAK-9G-cn1"/>
+                <outlet property="bookTitle" destination="hfe-JN-E2E" id="yvH-rJ-S9q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVz-al-tJB">
+                    <rect key="frame" x="5" y="5" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="ZMi-hS-QEs"/>
+                        <constraint firstAttribute="width" constant="128" id="lg5-Zd-ZgW"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HTJ-Cc-kW3">
+                    <rect key="frame" x="138" y="5" width="271" height="92"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-JN-E2E">
+                            <rect key="frame" x="0.0" y="0.0" width="271" height="31"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6T-dd-U2M">
+                            <rect key="frame" x="0.0" y="61" width="271" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="ZD1-a1-Qi5"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Показать"/>
+                            <connections>
+                                <action selector="buttobuttonDidTap:" destination="-1" eventType="touchUpInside" id="ScH-ei-K6N"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="u6T-dd-U2M" firstAttribute="leading" secondItem="HTJ-Cc-kW3" secondAttribute="leading" id="ECS-MX-52r"/>
+                        <constraint firstAttribute="trailing" secondItem="hfe-JN-E2E" secondAttribute="trailing" id="Z9N-FZ-YyO"/>
+                        <constraint firstItem="hfe-JN-E2E" firstAttribute="leading" secondItem="HTJ-Cc-kW3" secondAttribute="leading" id="e6e-27-JWh"/>
+                        <constraint firstAttribute="trailing" secondItem="u6T-dd-U2M" secondAttribute="trailing" id="vDi-dG-pc8"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HTJ-Cc-kW3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="2yT-Ev-Erb"/>
+                <constraint firstItem="dVz-al-tJB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="9oy-75-vZ5"/>
+                <constraint firstItem="HTJ-Cc-kW3" firstAttribute="leading" secondItem="dVz-al-tJB" secondAttribute="trailing" constant="5" id="AH0-XM-MmK"/>
+                <constraint firstItem="dVz-al-tJB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="E1D-Qj-eKL"/>
+                <constraint firstAttribute="bottom" secondItem="dVz-al-tJB" secondAttribute="bottom" constant="5" id="F0i-Mv-tc4"/>
+                <constraint firstAttribute="bottom" secondItem="HTJ-Cc-kW3" secondAttribute="bottom" constant="5" id="Ynb-aY-gJZ"/>
+                <constraint firstAttribute="trailing" secondItem="HTJ-Cc-kW3" secondAttribute="trailing" constant="5" id="wuz-95-VL0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="75.362318840579718" y="178.45982142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
